@@ -24,3 +24,8 @@ https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site
 
 <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
   <script src="{% static "js/bootstrap.min.js" %}"></script>
+
+
+
+
+  https://docs.djangoproject.com/en/2.0/ref/forms/widgets/
