@@ -1,6 +1,6 @@
 https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site
 
-
+C:\Users\jagatv\AppData\Local\Continuum\anaconda3\Scripts
 <!DOCTYPE html>
 {% load staticfiles %}
 
