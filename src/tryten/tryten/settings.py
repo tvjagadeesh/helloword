@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
+EMAIL_HOST='10.247.137.11'
+#EMAIL_PORT='587'
+EMAIL_HOST_USER='jagadeesh.tv@capgemini.com'
+EMAIL_HOST_PASSWORD='Thya*9538'
+EMAIL_USE_TLS=True
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES_DIR=os.path.join(BASE_DIR,'templates')
@@ -41,8 +47,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'simple',
     'contact',
-]
+    'crispy_forms',
+     # The following apps are required:
+    #'django.contrib.auth',
+    'django.contrib.sites',
 
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+]
+SITE_ID = 1
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -70,6 +84,15 @@ TEMPLATES = [
         },
     },
 ]
+AUTHENTICATION_BACKENDS = (
+
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+)
 
 WSGI_APPLICATION = 'tryten.wsgi.application'
 
@@ -123,3 +146,48 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[STATIC_DIR,]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+LOGIN_URL='/accounts/login/'
+LOGIN_REDIRECT_URL='/'
+
+ACCOUNT_AUTHENTICATION_METHOD='jagatv16@gmail.com'
+ACCOUNT_CONFIRM_EMAIL_ON_GET=False
+ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL=LOGIN_URL
+ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL=None
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS =3
+#ACCOUNT_EMAIL_CONFIRMATION_HMAC =True
+ACCOUNT_EMAIL_REQUIRED =False
+ACCOUNT_EMAIL_VERIFICATION =None
+ACCOUNT_EMAIL_SUBJECT_PREFIX ='My subject: '
+ACCOUNT_DEFAULT_HTTP_PROTOCOL ='http'
+'''ACCOUNT_EMAIL_CONFIRMATION_COOLDOWN =180
+ACCOUNT_EMAIL_MAX_LENGTH=254
+#ACCOUNT_FORMS ={}
+Used to override forms, for example: {'login': 'myapp.forms.LoginForm'}
+ACCOUNT_LOGIN_ATTEMPTS_LIMIT =5
+ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT =300'''
+ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION =False
+ACCOUNT_LOGOUT_ON_GET =False
+#ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE =False
+#ACCOUNT_LOGIN_ON_PASSWORD_RESET =False
+ACCOUNT_LOGOUT_REDIRECT_URL ='/'
+ACCOUNT_PASSWORD_INPUT_RENDER_VALUE =False
+#ACCOUNT_PRESERVE_USERNAME_CASING =True
+#ACCOUNT_SESSION_REMEMBER =None
+#ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE =False
+ACCOUNT_SIGNUP_FORM_CLASS =None
+ACCOUNT_SIGNUP_PASSWORD_VERIFICATION =True
+#ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE =True
+#ACCOUNT_TEMPLATE_EXTENSION =”html”
+#ACCOUNT_USERNAME_BLACKLIST =[]
+ACCOUNT_UNIQUE_EMAIL =True
+#ACCOUNT_USER_DISPLAY =a callable returning user.username
+ACCOUNT_USER_MODEL_EMAIL_FIELD ='jagatv16@gmail.com'
+ACCOUNT_USER_MODEL_USERNAME_FIELD ='jaga'
+ACCOUNT_USERNAME_MIN_LENGTH =2
+ACCOUNT_USERNAME_REQUIRED =True
+ACCOUNT_USERNAME_VALIDATORS =None
+ACCOUNT_USERNAME_BLACKLIST=[]
+ACCOUNT_PASSWORD_MIN_LENGTH =6

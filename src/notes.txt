@@ -29,3 +29,16 @@ https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site
 
 
   https://docs.djangoproject.com/en/2.0/ref/forms/widgets/
+
+
+https://docs.djangoproject.com/en/2.0/topics/email/
+
+
+http://django-crispy-forms.readthedocs.io/en/latest/
+
+pip install --upgrade django-crispy-forms
+
+
+http://django-allauth.readthedocs.io/en/latest/installation.html
+
+https://github.com/Asteriskkk/allauth
