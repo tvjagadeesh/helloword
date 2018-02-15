@@ -1,0 +1,9 @@
+Django all auth integration using Max OSX and Django 1.10.
+C:\Users\jagatv\AppData\Local\Continuum\anaconda3\Scripts
+
+
+http://django-allauth.readthedocs.io/en/latest/configuration.html
+
+pip install django-allauth
+
+pip freeze to see the installed module in our environment

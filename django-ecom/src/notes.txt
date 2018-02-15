@@ -1,0 +1,4 @@
+setup vitualenv
+pip install django
+https://help.pythonanywhere.com/pages/FollowingTheDjangoTutorial/
+https://scotch.io/tutorials/working-with-django-templates-static-files notes
